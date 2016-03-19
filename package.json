@@ -1,6 +1,6 @@
 {
   "name": "clony-pasta",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Extremely simple scaffolder.",
   "author": "Scott Hardy <scott.the.hardy@gmail.com> (https://www.scotthardy.me)",
   "main": "lib/index.js",
