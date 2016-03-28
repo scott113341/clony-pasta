@@ -6,7 +6,7 @@
 [![dev-dependencies][dev-dependencies-badge]][dev-dependencies-href]
 
 
-Foolishly simple scaffolding tool based off of [ez template language](https://github.com/scott113341/eztl).
+Foolishly simple scaffolding tool using the [ez template language](https://github.com/scott113341/eztl).
 
 
 ## installation
