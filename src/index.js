@@ -61,7 +61,7 @@ function prompt(type, name) {
 
 
 function promptString(name) {
-  const value = readlineSync.question(`${name} : `);
+  const value = readlineSync.question(`${name}: `);
   return { [name]: value };
 }
 
