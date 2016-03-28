@@ -1,6 +1,6 @@
 {
   "name": "clony-pasta",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Foolishly simple scaffolding tool based off of ez template language.",
   "author": "Scott Hardy <scott.the.hardy@gmail.com> (https://www.scotthardy.me)",
   "main": "lib/transform.js",
