@@ -18,7 +18,7 @@ if (!args._[0]) throw new Error('Repository is required.');
 if (!args._[1]) throw new Error('Directory is required.');
 const repository = args._[0];
 const directory = path.resolve(args._[1]);
-console.log('\n', getRandomPasta(), '\n');
+console.log(`\n${getRandomPasta()}\n`);
 
 exec(`
   git clone --quiet ${repository} ${directory} && \

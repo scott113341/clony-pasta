@@ -9,7 +9,6 @@ export const pastas = PASTAS;
 
 export function getRandomPasta() {
   const pastas = objectValues(PASTAS);
-  console.log(pastas);
   const index = Math.floor(Math.random() * pastas.length);
   return pastas[index];
 }
