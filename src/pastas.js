@@ -1,6 +1,12 @@
 const PASTAS = {
+  beautiful: '(◕‿◕✿)',
+  eyes: 'ಠ_ಠ',
+  gimme: '༼ つ ◕_◕ ༽つ',
   original: '( ͡° ͜ʖ ͡°)',
+  riot: '୧༼ಠ益ಠ༽୨',
   shrug: '¯\\_(ツ)_/¯',
+  strong: 'ᕙ༼ ◉_◉༽ᕗ',
+  tableFlip: '(╯°□°）╯︵ ┻━┻',
 };
 
 
