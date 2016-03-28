@@ -3,7 +3,7 @@
   "version": "0.2.3",
   "description": "Foolishly simple scaffolding tool using the ez template language.",
   "author": "Scott Hardy <scott.the.hardy@gmail.com> (https://www.scotthardy.me)",
-  "main": "lib/transform.js",
+  "main": "lib/index.js",
   "license": "MIT",
   "repository": "https://github.com/scott113341/clony-pasta.git",
   "homepage": "https://github.com/scott113341/clony-pasta",
@@ -11,7 +11,7 @@
   "files": [
     "lib/"
   ],
-  "bin": "lib/index.js",
+  "bin": "lib/cli.js",
   "preferGlobal": true,
   "scripts": {
     "precompile": "rm -rf lib/ && mkdir -p lib/",
