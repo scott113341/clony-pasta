@@ -3,26 +3,26 @@
 
 ```
 {
-  "name": "{{ if namespace? }}@{{ namespace }}/{{ end }}{{ name }}",
-  "private": {{ if private? }}true{{ else }}false{{ end }}
+  "name": "{{ namespace? }}@{{ namespace }}/{{ end }}{{ name }}",
+  "private": {{ private? }}true{{ else }}false{{ end }}
 }
 ```
 
 
-* `{{ if travis_ci? }}.travis.yml{{ end }}`
+* `{{ travis_ci? }}.travis.yml{{ end }}`
   * `travis_ci? = true` => `.travis.yml` exists
   * `travis_ci? = false` => `.travis.yml` does not exist
 
 
-* `README{{ if markdown_readme? }}.md{{ end }}`
+* `README{{ markdown_readme? }}.md{{ end }}`
   * `markdown_readme? = true` => `README.md` exists
   * `markdown_readme? = false` => `README` exists
 
-* `{{ if markdown_readme? }}README.md{{ else }}README{{ end }}`
+* `{{ markdown_readme? }}README.md{{ else }}README{{ end }}`
   * `markdown_readme? = true` => `README.md` exists
   * `markdown_readme? = false` => `README` exists
 
-* `{{ if markdown_readme? }}README.md{{ else }}README.{{ readme_extension }}{{ end }}`
+* `{{ markdown_readme? }}README.md{{ else }}README.{{ readme_extension }}{{ end }}`
   * `markdown_readme? = true` => `README.md` exists
   * `markdown_readme? = false`
     * `readme_extension = "txt"` => `README.txt` exists
