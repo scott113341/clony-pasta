@@ -8,11 +8,11 @@
   "repository": "https://github.com/scott113341/clony-pasta.git",
   "homepage": "https://github.com/scott113341/clony-pasta",
   "bugs": "https://github.com/scott113341/clony-pasta/issues",
-  "preferGlobal": true,
   "files": [
     "lib/"
   ],
-  "bin": "lib/cli.js",
+  "bin": "lib/index.js",
+  "preferGlobal": true,
   "scripts": {
     "precompile": "rm -rf lib/ && mkdir -p lib/",
     "compile": "babel -d lib/ src/",
