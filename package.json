@@ -1,6 +1,6 @@
 {
   "name": "clony-pasta",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Foolishly simple scaffolding tool using the ez template language.",
   "author": "Scott Hardy <scott.the.hardy@gmail.com> (https://www.scotthardy.me)",
   "license": "MIT",
