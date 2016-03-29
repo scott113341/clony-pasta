@@ -7,9 +7,9 @@ import eztl from 'eztl';
 import minimist from 'minimist';
 import readlineSync from 'readline-sync';
 
-import exec from './exec';
-import { getRandomPasta } from './pastas';
-import walk from './walk';
+import exec from './exec.js';
+import { getRandomPasta } from './pastas.js';
+import walk from './walk.js';
 
 
 const options = {};
