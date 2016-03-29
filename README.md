@@ -28,7 +28,7 @@ clony-pasta git@github.com:scott113341/scaffold-npm-module.git my-module
 [npm-version-badge]: https://img.shields.io/npm/v/clony-pasta.svg?style=flat-square
 [npm-version-href]: https://www.npmjs.com/package/clony-pasta
 
-[build-status-badge]: https://travis-ci.org/scott113341/clony-pasta.svg?style=flat-square
+[build-status-badge]: https://img.shields.io/travis/scott113341/clony-pasta.svg?style=flat-square
 [build-status-href]: https://travis-ci.org/scott113341/clony-pasta
 
 [dependencies-badge]: https://img.shields.io/david/scott113341/clony-pasta.svg?style=flat-square
