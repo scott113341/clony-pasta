@@ -1,8 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-
-export default function walk(dir) {
+export default function walk (dir) {
   const folders = [];
   const files = [];
 
@@ -16,8 +15,9 @@ export default function walk(dir) {
       const walkResults = walk(entryPath);
       walkResults.folders.forEach(f => folders.push(f));
       walkResults.files.forEach(f => files.push(f));
+    } else if (stat.isFile()) {
+      files.push(entryPath);
     }
-    else if (stat.isFile()) files.push(entryPath);
   });
 
   return { folders, files };

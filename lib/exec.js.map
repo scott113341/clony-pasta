@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/exec.js"],"names":["exec","cmd","String"],"mappings":";;;;;kBAEwBA,I;;AAFxB;;AAEe,SAASA,IAAT,CAAeC,GAAf,EAAoB;AACjC,SAAOC,OAAO,6BAASD,GAAT,CAAP,CAAP;AACD","file":"exec.js","sourcesContent":["import { execSync } from 'child_process';\n\nexport default function exec (cmd) {\n  return String(execSync(cmd));\n}\n"]}
