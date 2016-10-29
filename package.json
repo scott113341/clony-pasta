@@ -23,7 +23,7 @@
   "dependencies": {
     "eztl": "0.1.0",
     "minimist": "1.2.0",
-    "readline-sync": "1.4.1"
+    "readline-sync": "1.4.5"
   },
   "devDependencies": {
     "babel-cli": "^6.16.0",
