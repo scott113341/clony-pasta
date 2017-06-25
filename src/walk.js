@@ -16,8 +16,15 @@ export default function walk (dir, vars) {
     getVars(entry, vars);
     const ezEntryName = eztl(entry, vars);
 
-    // move interpolated files and dirs
+    // interpolated file/dir
     if (ezEntryName !== entry) {
+
+      // interpolated as blank
+      if (ezEntryName === '') {
+        fs.removeSync(entryPath);
+        continue;
+      }
+
       const ezEntryPath = path.join(dir, ezEntryName);
       fs.moveSync(entryPath, ezEntryPath);
       entryPath = ezEntryPath;
