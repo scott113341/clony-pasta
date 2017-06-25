@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
+import cp from 'child_process';
 import fs from 'fs-extra';
 import path from 'path';
 
 import eztl from 'eztl';
 import minimist from 'minimist';
 
-import exec from './exec.js';
 import getVars from './input.js';
 import { getRandomPasta } from './pastas.js';
-import walk from './walk.js';
+import getFiles from './walk.js';
 
 const options = {};
 const args = minimist(process.argv.slice(2), options);
@@ -19,16 +19,15 @@ const repository = args._[0];
 const directory = path.resolve(args._[1]);
 console.log(`\n${getRandomPasta()}\n`);
 
-exec(`
-  git clone --quiet ${repository} ${directory} && \
-  rm -rf ${directory}/.git
-`);
+cp.spawnSync('git', [ 'clone', '--quiet', repository, directory ]);
+fs.removeSync(path.join(directory, '.git'));
 
-var vars = {};
-const entries = walk(directory, vars);
-entries.files.forEach(file => {
+const vars = {};
+const files = getFiles(directory, vars);
+
+files.forEach(file => {
   const input = fs.readFileSync(file, 'utf-8');
-  Object.assign(vars, getVars(input, vars));
+  getVars(input, vars);
   const output = eztl(input, vars);
   fs.writeFileSync(file, output);
 });

@@ -1,10 +1,9 @@
 import eztl from 'eztl';
 import readlineSync from 'readline-sync';
 
-export default function getVars (input, vars) {
-  const UNDEFINED_ERROR = /(.+) variable "(.+)" is undefined\./;
-  vars = Object.assign({}, vars);
+const UNDEFINED_ERROR = /(.+) variable "(.+)" is undefined\./;
 
+export default function getVars (input, vars) {
   while (true) {
     try {
       eztl(input, vars);
