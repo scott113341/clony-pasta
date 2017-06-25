@@ -9,19 +9,37 @@
 Foolishly simple scaffolding tool using the [ez template language](https://github.com/scott113341/eztl).
 
 
-## installation
+## Installation
 ```bash
 npm install clony-pasta -g
 ```
 
-## usage
+## Usage
 ```bash
 clony-pasta [git repository] [destination folder]
 ```
 
-### example usage
+### Example Usage
+
+Set up a git repository with a scaffold.  For example, your `package.json` might look something like this:
+
+```
+{
+  "name": "{% scoped? %}@{% scope %}/{% end %}{% name %}",
+  "version": "0.0.0",
+  "description": "{% description %}",
+  "author": "{% author %}",
+  "license": "MIT",
+  ...
+}
+```
+
+Conditional files and directories are also supported.  For example, if you only sometimes want to generate tests, you could name your test directory `{% makeTests? %}tests{% end %}` and it will only include the directory (and sub-directories) if you respond "yes" to the `makeTests?` prompt.
+
+Then, when you want to generate a new project based on the scaffold, invoke the command:
+
 ```bash
-clony-pasta git@github.com:scott113341/scaffold-npm-module.git my-module
+clony-pasta git@github.com:scott113341/scaffold-npm-module.git my-new-project
 ```
 
 
